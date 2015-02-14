@@ -1,0 +1,69 @@
+#include<bits/stdc++.h>
+#include<stdlib.h>
+#include<cstdio>
+#include<utility>
+#include<vector>
+#include<iostream>
+#include<string.h>
+#include<map>
+#include<algorithm>
+#include<sstream>
+using namespace std;
+#define pb push_back
+#define mp make_pair
+#define clr(x) x.clear()
+#define For(i,a,b) for(i=a;i<b;i++)
+#define loop(i,b) for(i=0;i<b;i++)
+#define Loop(i,b) for(i=1;i<=b;i++)
+#ifndef ONLINE_JUDGE
+#define gc getchar
+#else
+#define gc getchar_unlocked
+#endif
+const int MOD=1e9+7;
+typedef pair<int,int> PII;
+typedef vector<PII> VPII;
+typedef vector<int> VI;
+typedef vector<VI>VII;   
+typedef long long LL;
+#define long long LL;
+#include<math.h>
+#define MAXN 100000
+//NAVIN
+//Lets do something new...
+// :) :) 
+/*LL read_int()
+{
+    char c = gc();
+    while(c<'0' || c>'9') c = gc();
+    
+    LL  ret = 0;
+    while(c>='0' && c<='9')
+    {
+        ret = 10 * ret + c - 48;
+        c = gc();
+    }
+    return ret;
+} */
+void Patternsearch(string T,string P)
+{
+    int N=T.size();
+    int M=P.size();
+    for(int i=0;i<=N-M;i++){
+        int j;
+        for(j=0;j<M;j++){
+            if(T[i+j]!=P[j])
+                break;
+        }
+        if(j==M)
+            cout<<"Pattern Found at index="<<i<<endl;
+    }
+}
+int main()
+{
+    string s,str;
+    cin>>s>>str;
+    Patternsearch(s,str);
+    return 0;
+    
+}
