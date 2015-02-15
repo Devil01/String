@@ -1,0 +1,58 @@
+#include<bits/stdc++.h>
+#include<stdlib.h>
+#include<cstdio>
+#include<utility>
+#include<vector>
+#include<iostream>
+#include<string.h>
+#include<map>
+#include<algorithm>
+#include<sstream>
+using namespace std;
+#define pb push_back
+#define mp make_pair
+#define clr(x) x.clear()
+#define For(i,a,b) for(i=a;i<b;i++)
+#define loop(i,b) for(i=0;i<b;i++)
+#define Loop(i,b) for(i=1;i<=b;i++)
+#ifndef ONLINE_JUDGE
+#define gc getchar
+#else
+#define gc getchar_unlocked
+#endif
+const int MOD=1e9+7;
+typedef pair<int,int> PII;
+typedef vector<PII> VPII;
+typedef vector<int> VI;
+typedef vector<VI>VII;   
+typedef long long LL;
+#define long long LL;
+#include<math.h>
+#define MAXN 100000
+//NAVIN
+//Lets do something new...
+// :) :) 
+void MaximumOccuringCharacter(string s)
+{
+    
+    map<char,int>M;
+    for(int i=0;i<s.size();i++){
+        M[s[i]]++;
+    }
+    int Max=0;
+    char ans;
+    for(map<char,int>::iterator it=M.begin();it!=M.end();it++){
+        if((*it).second>=Max)
+            Max=(*it).second;
+            ans=(*it).first;
+        }
+    cout<<ans<<endl;
+}
+int main()
+{
+    string s;
+    cin>>s;
+    MaximumOccuringCharacter(s);
+    return 0;
+    
+}
