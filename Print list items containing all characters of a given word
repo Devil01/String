@@ -1,0 +1,71 @@
+#include<bits/stdc++.h>
+#include<stdlib.h>
+#include<cstdio>
+#include<utility>
+#include<vector>
+#include<iostream>
+#include<string.h>
+#include<map>
+#include<algorithm>
+#include<sstream>
+using namespace std;
+#define pb push_back
+#define mp make_pair
+#define clr(x) x.clear()
+#define For(i,a,b) for(i=a;i<b;i++)
+#define loop(i,b) for(i=0;i<b;i++)
+#define Loop(i,b) for(i=1;i<=b;i++)
+#ifndef ONLINE_JUDGE
+#define gc getchar
+#else
+#define gc getchar_unlocked
+#endif
+const int MOD=1e9+7;
+typedef pair<int,int> PII;
+typedef vector<PII> VPII;
+typedef vector<int> VI;
+typedef vector<VI>VII;   
+typedef long long LL;
+#define long long LL;
+#include<math.h>
+#define MAXN 100000
+//NAVIN
+//Lets do something new...
+// :) :) 
+void Print(vector<string>V,string w)
+{
+    map<char,int>M;
+    for(int i=0;i<w.size();i++){
+              M[w[i]]=1;
+    }  
+   for(vector<string>::iterator it=V.begin();it!=V.end();it++)
+    {
+        int cnt=0;
+        for(int i=0;i<(*it).size();i++)
+        {
+            if(M[(*it).at(i)]){
+                cnt++;
+            M[(*it).at(i)]=0;
+            }
+         }
+        if(cnt==w.size())
+            cout<<(*it)<<endl;
+      for(int i=0;i<w.size();i++)
+              M[w[i]]=1;
+    }
+}
+int main()
+{
+    vector<string>V;
+    string w,s;
+    int n;
+    cin>>n;
+    cin>>w;
+    for(int i=0;i<n;i++ ){
+        cin>>s;
+        V.pb(s);
+    }
+    Print(V,w);
+    return 0;
+    
+}
